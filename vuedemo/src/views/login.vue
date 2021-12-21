@@ -3,6 +3,7 @@
     <h1>学习</h1>
     <el-button type="primary" @click="computed">computed</el-button>
     <el-button type="primary" @click="watch">watch</el-button>
+    <el-button type="primary" @click="datePicker">datePicker</el-button>
   </div>
 </template>
 
@@ -17,6 +18,9 @@ export default {
     },
     watch () {
       this.$router.push('/watch')
+    },
+    datePicker () {
+      this.$router.push('/datePicker')
     }
   }
 }

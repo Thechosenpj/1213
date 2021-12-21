@@ -6,7 +6,8 @@ import {
   FormItem,
   Input,
   Select,
-  Option
+  Option,
+  DatePicker
 } from 'element-ui'
 const element = {
   install: () => {
@@ -17,6 +18,7 @@ const element = {
     Vue.use(Input)
     Vue.use(Select)
     Vue.use(Option)
+    Vue.use(DatePicker)
   }
 }
 
