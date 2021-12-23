@@ -1,5 +1,7 @@
 <template>
   <div class="computed">
+    <h2>{{ pageComputed }}</h2>
+    <el-button type="primary" @click="goPage">获取页面</el-button>
     <el-form :inline='true'>
       <el-form-item label="品种" prop="breed">
         <el-select v-model='breed' placeholder="请选择品种" @change="breedChange">
@@ -53,11 +55,17 @@ export default {
         this.count = newVal / this.price
         this.price = newVal / this.count
       }
+    },
+    pageComputed () {
+      return this.$store.state.page.computeds
     }
   },
   methods: {
     breedChange () {
       this.price = this.breed
+    },
+    goPage () {
+      this.$store.commit('computeds', '计算属性页面')
     }
   }
 }

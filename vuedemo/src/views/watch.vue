@@ -1,6 +1,8 @@
 <template>
   <div class="watch">
     <h1>watch选项</h1>
+    <h2>{{ pageWatch }}</h2>
+    <el-button type="primary" @click="goPage">获取页面</el-button>
     <!-- <h2>{{ msg }}</h2>
     <h2>{{ msg.msg2.msg3 }}</h2>
     <h2>{{ msg.msg2.msg4 }}</h2>
@@ -102,6 +104,11 @@ export default {
       }, 3000)
     }
   },
+  computed: {
+    pageWatch () {
+      return this.$store.state.page.watchs
+    }
+  },
   methods: {
     // msgWatch () {
     //   this.msg.msg2.msg4 = 66
@@ -124,6 +131,9 @@ export default {
     // msgA () {
     //   this.msg.a += 1
     // }
+    goPage () {
+      this.$store.commit('watchs', '侦听属性watch页面')
+    }
   }
 }
 </script>
