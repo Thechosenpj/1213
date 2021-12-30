@@ -6,6 +6,7 @@
     <el-button type="primary" @click="watch">watch</el-button>
     <el-button type="primary" @click="datePicker">datePicker</el-button>
     <el-button type="primary" @click="goPage">获取页面</el-button>
+    <el-button type="primary" @click="goCount">Count</el-button>
   </div>
 </template>
 
@@ -40,6 +41,9 @@ export default {
       this.$store.commit('login', '首页')
       this.$store.commit('computeds', '计算属性computed')
       this.$store.commit('watchs', '侦听属性watch')
+    },
+    goCount () {
+      this.$router.push('/count')
     }
   }
 }

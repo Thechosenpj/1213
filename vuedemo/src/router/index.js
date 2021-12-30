@@ -24,6 +24,11 @@ const routes = [
     path: '/datePicker',
     name: 'datePicker',
     component: () => import('../views/datePicker.vue')
+  },
+  {
+    path: '/count',
+    name: 'count',
+    component: () => import('../views/count.vue')
   }
 ]
 
