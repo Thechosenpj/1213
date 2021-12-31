@@ -13,9 +13,9 @@
       </el-option>
     </el-select>
     <el-button @click="add">+</el-button>
-    <el-button @click="odd">-</el-button>
-    <el-button>为奇数时在+</el-button>
-    <el-button>等一等在+</el-button>
+    <el-button @click="reduce">-</el-button>
+    <el-button @click="odd">为奇数时在+</el-button>
+    <el-button @click="stopCount">等一等在+</el-button>
   </div>
 </template>
 
@@ -49,8 +49,15 @@ export default {
     add () {
       this.$store.commit('jia', this.num)
     },
-    odd () {
+    reduce () {
       this.$store.commit('jian', this.num)
+    },
+    odd () {
+      this.$store.dispatch('odd', this.num)
+    },
+    stopCount () {
+      console.log('$', this.$store)
+      this.$store.dispatch('stop', this.num)
     }
   }
 }

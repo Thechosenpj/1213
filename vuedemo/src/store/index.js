@@ -39,6 +39,20 @@ export default new Vuex.Store({
     }
   },
   actions: {
+    odd (context, val) {
+      console.log('为奇数时在加')
+      if (context.state.sum % 2) {
+        context.commit('jia', val)
+      } else {
+        alert('傻子，这是偶数')
+      }
+    },
+    stop (context, val) {
+      console.log('等等再加')
+      setTimeout(() => {
+        context.commit('jia', val)
+      }, 1000)
+    }
   },
   modules: {
   }

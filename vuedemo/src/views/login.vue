@@ -28,7 +28,6 @@ export default {
   },
   methods: {
     computed () {
-      console.log('this', this.$store)
       this.$router.push('/computed')
     },
     watch () {
