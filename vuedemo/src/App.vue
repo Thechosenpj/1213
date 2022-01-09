@@ -1,9 +1,13 @@
 <template>
   <div id="app">
       <router-view/>
+<<<<<<< Updated upstream
       <!-- 
         现在开始解决冲突
        -->
+=======
+      <!-- 我悟了 -->
+>>>>>>> Stashed changes
   </div>
 </template>
 
