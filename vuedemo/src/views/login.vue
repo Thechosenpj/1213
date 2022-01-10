@@ -7,6 +7,7 @@
     <el-button type="primary" @click="datePicker">datePicker</el-button>
     <el-button type="primary" @click="goPage">获取页面</el-button>
     <el-button type="primary" @click="goCount">Count</el-button>
+    <el-button type="primary" @click="tablePopover">tablePopover</el-button>
   </div>
 </template>
 
@@ -43,6 +44,9 @@ export default {
     },
     goCount () {
       this.$router.push('/count')
+    },
+    tablePopover () {
+      this.$router.push('/tablePopover')
     }
   }
 }

@@ -7,7 +7,10 @@ import {
   Input,
   Select,
   Option,
-  DatePicker
+  DatePicker,
+  Table,
+  TableColumn,
+  Popover
 } from 'element-ui'
 const element = {
   install: () => {
@@ -19,6 +22,9 @@ const element = {
     Vue.use(Select)
     Vue.use(Option)
     Vue.use(DatePicker)
+    Vue.use(Table)
+    Vue.use(TableColumn)
+    Vue.use(Popover)
   }
 }
 

@@ -29,6 +29,11 @@ const routes = [
     path: '/count',
     name: 'count',
     component: () => import('../views/count.vue')
+  },
+  {
+    path: '/tablePopover',
+    name: 'tablePopover',
+    component: () => import('../views/tablePopover.vue')
   }
 ]
 
